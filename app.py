@@ -8,6 +8,17 @@ SCALES = {
     "G Major": ["G", "A", "B", "C", "D", "E", "F#"],
     "D Major": ["D", "E", "F#", "G", "A", "B", "C#"],
     "A Major": ["A", "B", "C#", "D", "E", "F#", "G#"],
+    "E Major": ["E", "F#", "G#", "A", "B", "C#", "D#"],
+    "B Major": ["B", "C#", "D#", "E", "F#", "G#", "A#"],
+    "F# Major": ["F#", "G#", "A#", "B", "C#", "D#", "E#"],
+    "C# Major": ["C#", "D#", "E#", "F#", "G#", "A#", "B#"],
+    "F Major": ["F", "G", "A", "Bb", "C", "D", "E"],
+    "Bb Major": ["Bb", "C", "D", "Eb", "F", "G", "A"],
+    "Eb Major": ["Eb", "F", "G", "Ab", "Bb", "C", "D"],
+    "Ab Major": ["Ab", "Bb", "C", "Db", "Eb", "F", "G"],
+    "Db Major": ["Db", "Eb", "F", "Gb", "Ab", "Bb", "C"],
+    "Gb Major": ["Gb", "Ab", "Bb", "Cb", "Db", "Eb", "F"],
+    "Cb Major": ["Cb", "Db", "Eb", "Fb", "Gb", "Ab", "Bb"], 
     # Add more scales as needed
 }
 
