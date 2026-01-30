@@ -1,4 +1,4 @@
-from flask import Flask, request, render_template_string
+from flask import Flask, request, render_template_string, url_for
 
 app = Flask(__name__)
 
@@ -35,19 +35,30 @@ def scales_test():
         ''', correct_count=correct_count, total_notes=len(correct_scale), scale=selected_scale)
 
     return render_template_string('''
+        <head>
+        <title>Scales Test</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+        </head>
+        <div class="form-container">
+        <h1>Major Scales Test</h1>
         <form method="post">
             <p>Select a scale to try:</p>
-            <select name="scale">
+            <select name="scale" class="scale-select">
                 {% for scale in scales %}
                     <option value="{{ scale }}">{{ scale }}</option>
                 {% endfor %}
             </select>
             <p>Enter the notes of the selected scale in order:</p>
+            <p>Use "#" for sharps and "b" for flats. All notes need to be uppercase or it will
+            not be marked as correct.</p>
+            <div class="notes-input">
             {% for i in range(7) %}
-                <input type="text" name="notes" placeholder="Note {{ i + 1 }}">
+                <input type="text" name="notes" placeholder="Note {{ i + 1 }}" required>
             {% endfor %}
             <button type="submit">Submit</button>
+            </div>
         </form>
+        </div>
     ''', scales=SCALES.keys())
 
 if __name__ == "__main__":

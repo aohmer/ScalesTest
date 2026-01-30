@@ -1,0 +1,46 @@
+.form-container {
+max-width: 1000px; 
+margin: auto; 
+padding: 20px; 
+font-family: Arial, sans-serif; 
+}
+
+.scale-select {
+    width: 30%; 
+    padding: 8px; 
+    margin-bottom: 10px;
+}
+.notes-input {
+    grid-column: span 7; 
+    display: grid; 
+    grid-template-columns: repeat(7, 1fr);
+    justify-content: center; 
+    gap: 10px;
+}
+input[type="text"] {
+    width: 80%; 
+    padding: 8px; 
+    margin: 5px;
+    text-align: center;
+}
+
+button[type="submit"] {
+    grid-column: span 7;
+    background-color: #4CAF50; 
+    color: white; 
+    border: none; 
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    justify-self: center;
+}
+
+button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+button[type="submit"]:active {
+    background-color: #3e8e41;
+}
