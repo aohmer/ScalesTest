@@ -44,3 +44,11 @@ button[type="submit"]:hover {
 button[type="submit"]:active {
     background-color: #3e8e41;
 }
+
+.result-container {
+    max-width: 600px; 
+    margin: auto; 
+    padding: 20px; 
+    font-family: Arial, sans-serif; 
+    text-align: center;
+}

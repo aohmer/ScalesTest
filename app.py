@@ -30,8 +30,14 @@ def scales_test():
         correct_scale = SCALES[selected_scale]
         correct_count = sum(1 for note, correct_note in zip(user_input, correct_scale) if note == correct_note)
         return render_template_string('''
+        <head>
+        <title>Scales Test</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+        </head>                              
+        <div class="result-container">
             <h1>You got {{ correct_count }} out of {{ total_notes }} notes correct for the {{ scale }} scale!</h1>
             <a href="/">Try again</a>
+        </div>
         ''', correct_count=correct_count, total_notes=len(correct_scale), scale=selected_scale)
 
     return render_template_string('''
