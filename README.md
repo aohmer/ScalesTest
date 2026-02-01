@@ -1,2 +1,2 @@
 # ScalesTest
-Command line app to test building scales.
+Flask app to test building major scales.
